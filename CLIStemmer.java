@@ -30,6 +30,10 @@ public class CLIStemmer {
 
 
 	public static void main(String[] args) {
+        if (args.length < 2) {
+            System.out.println("Usage: java CLIStemmer INPUTFILE OUTPUTFILE [ENCODING=UTF8]");
+            return;
+        }
 		StatsVector statsVector = new StatsVector();
 		File fileIn = new File(args[0]);
 		File fileOut = new File(args[1]);
